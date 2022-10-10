@@ -1,4 +1,4 @@
-#H1 autowater
+# autowater
 
 automatic watering system for balcony/home gardens, suitable for pots also.
 
