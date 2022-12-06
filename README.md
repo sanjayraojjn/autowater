@@ -1,6 +1,6 @@
 # autowater
 
-automatic watering system for balcony/home gardens, suitable for pots also.
+automatic watering system for balcony/home garden pots.
 
 This is a full project developed using visual studio code and PlatformIO. Setup guidelines are documented [here](https://platformio.org/platformio-ide)
 
