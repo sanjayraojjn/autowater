@@ -65,12 +65,14 @@ void setup() {
     Serial.println("Soil is dry. Pump is starting");
     run_pump();
     pump_was_running=true;
+    //print sleep message
+    Serial.println("Going for short sleep");
     //give a rest to pump and the system
     deep_sleep(PUMP_REST_TIME_mS);
     //delay(PUMP_REST_TIME_mS);
   }
   else{
-    Serial.println("Soil is OK. long rest");
+    Serial.println("Soil is OK. long sleep");
     pump_was_running = false;
     deep_sleep(DEEP_SLEEP_TIME_mS);
     //delay(DEEP_SLEEP_TIME_mS);
