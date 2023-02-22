@@ -8,8 +8,8 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "d:/work/autowater/include",
-                "d:/work/autowater/src",
+                "d:/work/autowater/esp32/include",
+                "d:/work/autowater/esp32/src",
                 "C:/Users/srao/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "C:/Users/srao/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                 "C:/Users/srao/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -235,8 +235,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "d:/work/autowater/include",
-                    "d:/work/autowater/src",
+                    "d:/work/autowater/esp32/include",
+                    "d:/work/autowater/esp32/src",
                     "C:/Users/srao/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "C:/Users/srao/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                     "C:/Users/srao/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
