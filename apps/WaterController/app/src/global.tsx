@@ -1,4 +1,4 @@
-export const console_enabled = false;
+export const console_enabled = true;
 export const emulator = true;
 export const start_ip = "192.168.1.50";
 export const num_ips = 20;

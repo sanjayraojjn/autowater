@@ -194,7 +194,8 @@ export default function SerchingDevices(props) {
      const handle_delete_device = ({item}) => {
 
      }
-     const handle_add_device = ({item}) => {
+     const handle_add_device = async ({item}) => {
+        let success: boolean = await add_device( device_name(item), item );
         add_device( device_name(item), item ).then( (added) =>{
             if(!added){
                 Alert.alert("Add Device", "Unable to add the device.", [{"text":"OK"}])

@@ -1,5 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { console_log } from "../global";
+import { Alert } from "react-native";
 
 const _add_device = (name, device) =>{
 
@@ -14,10 +15,12 @@ export const add_device = async (name: string, device: {}) =>{
     
             let devices_str: string = JSON.stringify(devices);
             AsyncStorage.setItem('DEVICES', devices_str);
+            console.log("added device " + devices_str);
             return true;
         } );    
     }catch(e){
-        console.error("unable to write information of " + name);
+        console.error("unable to write information of " + name + " " + e );
+        Alert.alert("Add Device", "Unable to add the device. " + e, [{"text":"OK"}])
         return false;
     }
 }
