@@ -1,22 +1,24 @@
 #include <Arduino.h>
-#include <esp_timer.h>
+#include <Ticker.h>
 
 #include <macros.h>
 #include <power.h>
 #include <wifi_aw.h>
 #include <spiffs_aw.h>
 #include <web.h>
+#include <water.h>
 
 RTC_DATA_ATTR bool pump_was_running = false;
 
 Led onboard_led = {LED_BUILTIN, false};
+Ticker periodic_timer;
 
 void setup()
 {
     // put your setup code here, to run once:
     pinMode(onboard_led.pin, OUTPUT);
 
-    Serial.begin(9600);
+    Serial.begin(115200);
     delay(1000);
 
     // initWiFi();
@@ -32,6 +34,9 @@ void setup()
     // keep the pump is stopped condition
     digitalWrite(PUMP_CONTROL_PIN, HIGH);
     delay(5000);
+
+    // now start watering program
+    periodic_timer.attach_ms(DEEP_SLEEP_TIME_mS, check_water);
 }
 
 void loop()

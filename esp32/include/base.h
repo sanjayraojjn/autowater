@@ -9,13 +9,11 @@
 
 #define __PL(a) Serial.println(a)
 #define __PP(a) Serial.print(a)
-#define __PF(a, ...) Serial.printf(a, ...)
 
 #else // DEV_FLAG
 
 #define __PL(a)
 #define __PP(a)
-#define __PF(a, ...)
 
 #endif // DEV_FLAG
 

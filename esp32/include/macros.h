@@ -1,6 +1,8 @@
 #ifndef __AUTOWATER_MACRO_H__
 #define __AUTOWATER_MACRO_H__
 
+#include <Arduino.h>
+
 #define S_TO_uS_FACTOR 1000000
 #define S_TO_mS_FACTOR 1000
 #define mS_TO_uS_FACTOR 1000
@@ -10,19 +12,20 @@
 #define SOIL_INPUT_PIN2 32
 #define POTENTIOMETER_PIN 35
 
-// #define DEV_FLAG 1
+#define DEV_FLAG 1
 
 #define DRYNESS_THRESHOLD_HIGH 2800
 #define DRYNESS_THRESHOLD_LOW 1200
 #define DRYNESS_LEVELS 4096
 #define DRYNESS_OFFSET 200
 #define DEFAULT_REQUIRED_MOIST 1600
+#define DEFAULT_REQUIRED_MOIST_SETTING 25
 
 // time intervals
 
 // define some global names
 #define APPNAME "AUTOWATER"
-#define APPKEY_REQ_MOIST "REQ_MOIST"
+#define APPKEY_REQ_MOIST_SETTING "REQ_MOIST_SETTING"
 
 // web parameters
 #define HTTP_PORT 80

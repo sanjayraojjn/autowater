@@ -9,7 +9,7 @@ extern Led onboard_led;
 
 void initSPIFFS()
 {
-  if (!SPIFFS.begin())
+  if (!SPIFFS.begin(true))
   {
     __PL("cannot mount SPIFFS volume...");
     while (1)
